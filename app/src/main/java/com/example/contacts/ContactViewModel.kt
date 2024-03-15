@@ -14,7 +14,9 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-class ContactViewModel(dao: ContactDao): ViewModel() {
+class ContactViewModel(
+    private val dao: ContactDao
+): ViewModel() {
     private val _sortType = MutableStateFlow(SortType.firstName)
     private val _contacts = _sortType
         .flatMapLatest { sortType ->
@@ -54,7 +56,7 @@ class ContactViewModel(dao: ContactDao): ViewModel() {
                     phoneNumber =phoneNumber
                 )
                 viewModelScope.launch {
-                    dao.upsetContact(contact)
+                    dao.upsertContact(contact)
                 }
                 _state.update { it.copy(
                     isAddingContact = true,
