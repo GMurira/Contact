@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "648687848488",
+    "project_id": "contacts-1441b",
+    "storage_bucket": "contacts-1441b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648687848488:android:450adc63528a9df247b91d",
+        "android_client_info": {
+          "package_name": "com.example.contacts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwViyGMkV1utgHNKbJWBzFStDwYqRMHDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
